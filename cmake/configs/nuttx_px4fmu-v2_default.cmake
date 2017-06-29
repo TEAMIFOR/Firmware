@@ -1,8 +1,12 @@
+#this cmake has been modified i4
+
 include(nuttx/px4_impl_nuttx)
 
 px4_nuttx_configure(HWCLASS m4 CONFIG nsh ROMFS y ROMFSROOT px4fmu_common)
 
 set(CMAKE_TOOLCHAIN_FILE ${PX4_SOURCE_DIR}/cmake/toolchains/Toolchain-arm-none-eabi.cmake)
+
+set(PARAM_DEFAULT_OVERRIDES "{\\\"SYS_MC_EST_GROUP\\\": 1}")
 
 set(config_uavcan_num_ifaces 2)
 
@@ -104,10 +108,10 @@ set(config_module_list
 	#
 	# Estimation modules
 	#
-	#modules/attitude_estimator_q
+	modules/attitude_estimator_q
 	#modules/position_estimator_inav
-	#modules/local_position_estimator
-	modules/ekf2
+	modules/local_position_estimator
+	#modules/ekf2
 
 	#
 	# Vehicle Control
