@@ -18,7 +18,9 @@ Firmware/src/modules/navigator/navigator_main.cpp                      change #i
 Firmware/src/lib/ecl/validation/data_validator_group.cpp               change #include <cfloat> to <float.h>
 Firmware/src/modules/vtol_att_control/vtol_type.cpp                    change #include <cfloat> to <float.h>
 Firmware/src/modules/fw_pos_control_l1/FixedwingPositionControl.hpp    change #include <cfloat> to <float.h>
-Firmware/src/modules/gnd_pos_control/GroundRoverPositionControl.hpp    change #include <cfloat> to <float.h> 
+Firmware/src/modules/gnd_pos_control/GroundRoverPositionControl.hpp    change #include <cfloat> to <float.h>
+Firmware/src/drivers/boards/sitl/../common/board_common.h:246:29:      add #include <px4_config.h> 
+error: ‘PX4_CPU_UUID_BYTE_LENGTH’ was not declared in this scope       add #include <px4_config.h>
 ```
 Simulation env setup instrucs:
 ```
